@@ -1,0 +1,27 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+{% if page_exists %}
+    <h1>Edit Page Page</h1>
+    <form name="editentry" action="{% url 'new_entry' %}" method="POST" >
+        <div class="myForm">
+            {% csrf_token %}
+            {{ form }}
+        </div>
+        <input type="submit" name= "edit" value="Submit" />        
+    </form>     
+{% else %}
+    <h1>Create New Page</h1>
+    <form name="createnewentry" action="{% url 'new_entry' %}" method="POST" >
+        <div class="myForm">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" name= "create" value="Submit" /> 
+        </div>       
+    </form>
+{% endif %}
+{% endblock %}

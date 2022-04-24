@@ -36,3 +36,28 @@ textarea {
 .sidebar h2 {
     margin-top: 5px;
 }
+
+.myForm{
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: 800px;
+}
+
+.grayOut {
+    opacity: 0.4;
+    filter: alpha(opacity = 60);
+}
+
+button,input[type=submit] {
+    font: 13px arial, sans-serif;
+    font-weight: bold;
+    padding: 8px 13px;
+    color: #ffffff;
+    background-color: #7200ff;
+    border: 1px solid #197702;
+    border-radius: 2px;
+    margin-top: 1%;
+    width:10%
+}
+

@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+{% load markdown_to_html %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    {{content|safe }}
+{% if editbutton %}
+    <a href="{% url 'edit_entry' title %}"><button>Edit Page</button></a>
+{% endif%}
+
+{% endblock %}
